@@ -1,8 +1,18 @@
+---- First Run
+deployment.apps/prediction-deployment created
+NAME                                     READY   STATUS    RESTARTS      AGE
+nginx-deployment-6767546888-t8kff        1/1     Running   4 (23m ago)   86d
+odoo-1656446652-dd74b9c8d-wt5gd          1/1     Running   2 (23m ago)   61d
+odoo-1656446652-postgresql-0             1/1     Running   2 (23m ago)   61d
+prediction-deployment-6bc8cd867f-lksh7   0/1     Pending   0             0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+--- Second run: Exposing the application as pod has now started
 error: failed to create deployment: deployments.apps "prediction-deployment" already exists
 NAME                                     READY   STATUS    RESTARTS      AGE
-nginx-deployment-6767546888-t8kff        1/1     Running   4 (15m ago)   86d
-odoo-1656446652-dd74b9c8d-wt5gd          1/1     Running   2 (15m ago)   61d
-odoo-1656446652-postgresql-0             1/1     Running   2 (15m ago)   61d
-prediction-deployment-6bc8cd867f-6q7mn   1/1     Running   0             33s
+nginx-deployment-6767546888-t8kff        1/1     Running   4 (24m ago)   86d
+odoo-1656446652-dd74b9c8d-wt5gd          1/1     Running   2 (24m ago)   61d
+odoo-1656446652-postgresql-0             1/1     Running   2 (24m ago)   61d
+prediction-deployment-6bc8cd867f-lksh7   1/1     Running   0             42s
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
